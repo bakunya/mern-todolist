@@ -1,0 +1,90 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    h1 {
+        @apply text-3xl font-bold;
+    }
+    h2 {
+        @apply text-2xl font-bold;
+    }
+    h3 {
+        @apply text-xl font-semibold;
+    }
+    h4 {
+        @apply text-lg;
+    }
+    h5 {
+        @apply text-base;
+    }
+    h6 {
+        @apply text-sm;
+    }
+}
+
+@layer components {
+    .container-centered {
+        @apply min-h-[100vh] min-w-[100vw] max-w-[1000px] flex justify-center items-start sm:items-center bg-light-primary p-10 mx-auto;
+    }
+
+    .container {
+        @apply min-h-[100vh] min-w-[100vw] max-w-[1000px] bg-light-primary p-10 mx-auto;
+    }
+
+    .input-primary {
+        @apply px-3 py-2 text-lg outline-none border-2 border-dark-green rounded-xl shadow-lg transition-shadow duration-300 focus:shadow-none;
+    }
+
+    .btn-primary {
+        @apply px-3 py-2 text-lg outline-none text-white bg-dark-green rounded-xl shadow-lg transition-shadow duration-300 focus:shadow-none hover:shadow-none active:shadow-none;
+    }
+}
+
+.backdrop {
+    @apply bg-black/70 w-screen h-screen fixed inset-0 flex justify-end items-center z-[99];
+}
+
+.new-todo {
+    @apply w-full bg-white rounded-none sm:w-[500px] sm:rounded-tl-xl sm:rounded-bl-xl p-5;
+}
+
+.backdrop-transition-enter {
+    @apply transition-all duration-300 opacity-0;
+}
+.backdrop-transition-enter-done {
+    @apply transition-all duration-300 opacity-100;
+}
+.backdrop-transition-enter-active {
+    @apply transition-all duration-300 opacity-100;
+}
+
+.backdrop-transition-exit {
+    @apply transition-all duration-300 opacity-100;
+}
+.backdrop-transition-exit-done {
+    @apply transition-all duration-300 opacity-0;
+}
+.backdrop-transition-exit-active {
+    @apply transition-all duration-300 opacity-0;
+}
+
+.add-todo-container-enter {
+    @apply transition-all duration-300 translate-x-[500px];
+}
+.add-todo-container-enter-done {
+    @apply transition-all duration-300 translate-x-0;
+}
+.add-todo-container-enter-active {
+    @apply transition-all duration-300 translate-x-0;
+}
+
+.add-todo-container-exit {
+    @apply transition-all duration-300 translate-x-0;
+}
+.add-todo-container-exit-done {
+    @apply transition-all duration-300 translate-x-[500px];
+}
+.add-todo-container-exit-active {
+    @apply transition-all duration-300 translate-x-[500px];
+}
