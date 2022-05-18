@@ -8,7 +8,7 @@
     "start": "node index"
   },
   "keywords": [],
-  "author": "",
+  "author": "Bakunya",
   "license": "ISC",
   "dependencies": {
     "bcrypt": "^5.0.1",
@@ -17,5 +17,8 @@
     "helmet": "^5.0.2",
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^6.3.2"
-  }
+  },
+  "engines": {
+    "node": "16.x"
+  }	
 }

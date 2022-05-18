@@ -75,7 +75,7 @@ const CardTodo = ({ todo, todoId, onCopy, onDelete, onUpdate }) => {
 
         try {
             await navigator.clipboard.writeText(todoUpdateValue)
-            onCopy(todoUpdateValue)
+            if(onCopy instanceof Function) onCopy(todoUpdateValue)
             setIsSuccessToCopy(true)
         } catch(er) {
             console.error(er.message)
