@@ -111,7 +111,7 @@ const CardTodo = ({ todo, todoId, onCopy, onDelete, onUpdate }) => {
                     isReadyToChange 
                         ? 'scale-100' 
                         : 'scale-95',
-                    'transition-transform duration-200 w-12/12 sm:w-6/12 xl:w-4/12 p-2'
+                    'transition-transform duration-200 w-full sm:w-6/12 xl:w-4/12 p-2'
                 )
             }
         >
